@@ -1,0 +1,199 @@
+<script src="js/jquery/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+		fadeoutpreloader()
+		function menuPromo() {
+		  return new Promise((resolve, reject) => {
+			resolve($("#menuDig").load("_menu.html"))
+		  });
+		}
+		async function footpromo() {
+		  await menuPromo()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footerDig").load("_footer.html"))
+		  });
+		}
+		async function footLinkpromo() {
+		  await footpromo()
+		  return new Promise((resolve, reject) => {
+			resolve($("#footlinkDig").load("_footlink.html"))
+		  });
+		}
+		async function bodyreveal() {
+		  await footLinkpromo()
+		  return new Promise((resolve, reject) => {
+			resolve($("body").show())
+		  });
+		}
+		async function fadeoutpreloader() {
+		  await footLinkpromo()
+		  return new Promise((resolve, reject) => {
+		  
+		  setTimeout(upup, 2000);
+			function upup() {
+			
+			resolve($(".preloader").addClass('loaded'))
+			resolve($(".page").css("opacity", "1"))
+
+			}
+			
+		  });
+		}
+      
+    });
+  </script>
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Dubai Gulf Investment</title>
+	<meta name="description" content="Discover investment opportunities in Dubai with our comprehensive platform. Get informed, make smart decisions, and grow your wealth.">
+	<meta name="keywords" content="Dubai, Investment, Opportunities, Wealth, Growth, Platform">
+	<meta name="author" content="Dubai Gulf Investment">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+   
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    
+      <header class="section page-header rd-navbar-transparent-wrap">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-transparent" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="44px" data-xl-stick-up-offset="44px" data-xxl-stick-up-offset="44px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse">
+              <div class="rd-navbar-aside">
+                <div class="rd-navbar-info">
+                  <div class="icon novi-icon mdi mdi-email"></div><a href="">info@dgipjsc.com</a>
+                </div>
+                <ul class="list-lined">
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main-inner">
+                <div class="rd-navbar-main">
+                  <!--RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!--RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <!--RD Navbar Brand-->
+                    <div class="rd-navbar-brand">
+                      <!--Brand--><a class="brand" href="./"><img class="brand-logo-dark" src="images/logo-default-293x44.png" alt="" width="146" height="22"/><img class="brand-logo-light" src="images/logo-inverse-310x44.png" alt="" width="155" height="22"/></a>
+                    </div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <ul id="menuDig" class="rd-navbar-nav">
+                       
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="rd-navbar-bg novi-background bg-image" style="background-image: url(images/bg-navbar.jpg)"></div>
+      </header>
+      <!-- Breadcrumbs-->
+      <section class="breadcrumbs-custom bg-image novi-background bg-primary">
+        <div class="container">
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="./">Home</a></li>
+            <li class="active">About</li>
+          </ul>
+        </div>
+      </section>
+      <!-- Our Story-->
+      <section class="section section-lg bg-default">
+        <div class="container">
+          <h2><span class="text-light">Our</span> Story</h2>
+          <div class="row row-30 justify-content-xl-between">
+            <div class="col-md-12 col-xl-12">
+              <p class="big">Dubai Gulf Investment PJSC. (the “Company”) is a private joint stock company incorporated in the Emirate of Dubai, United Arab Emirates, in accordance with the provisions of the U.A.E. Federal Commercial Companies Law No. 8 of 1984, (as amended), the U.A.E. Central Bank, the Monetary System and Organization of Banking Law No. (10) of 1980 and under authority of resolutions of the Board of Directors of the U.A.E Central Bank relating to Finance Companies.<br><br>
+			  
+			  Dubai Gulf Investment PJSC. Is based in Dubai and is licensed and regulated by the UAE Central Bank, with a paid up capital base of AED 420,000,000,000 Billion.<br><br>
+			  
+			  The company was incorporated on 11th of May 2009 and has its registered offices at Near Burj Khalifa, 1 Sheikh Mohammed bin Rashid Blvd - Dubai - United Arab Emirates.
+			  </p>
+              
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- Our Principles-->
+      <section class="section section-lg bg-gray-100">
+        <div class="container text-center text-lg-left">
+          <h2><span class="text-light">Our</span> Principles</h2>
+          <div class="row row-30 number-counter-2">
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title">Integrity</h5>
+                  <div class="content">We uphold the highest ethical standards in all our business dealings.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title">Sustainability</h5>
+                  <div class="content">We prioritize long-term, sustainable growth in our investment approach.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box-numbered-left unit">
+                <div class="unit-left">
+                  <div class="index-counter"></div>
+                </div>
+                <div class="unit-body">
+                  <h5 class="title">Resilience</h5>
+                  <div class="content">We are committed to overcoming challenges and learning from our experiences.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+	  <div class="box-footer-banner">
+	  </div>
+      <div id="footerDig"> </div>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <div id="footlinkDig"> </div>
+  </body>
+</html>
