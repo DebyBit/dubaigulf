@@ -10,6 +10,16 @@ function grudMend(){
         document.getElementById("teamLk").classList.add("active");
     }else if(currento == "services.html" || currento.includes("services")){
         document.getElementById("serviceLk").classList.add("active");
+    }else if(currento == "loan.html" || currento.includes("loan")){
+        document.getElementById("serviceLk").classList.add("active");
+    }else if(currento == "mezzanine.html" || currento.includes("mezzanine")){
+        document.getElementById("serviceLk").classList.add("active");
+    }else if(currento == "asset.html" || currento.includes("asset")){
+        document.getElementById("serviceLk").classList.add("active");
+    }else if(currento == "project.html" || currento.includes("project")){
+        document.getElementById("serviceLk").classList.add("active");
+    }else if(currento == "estate.html" || currento.includes("estate")){
+        document.getElementById("serviceLk").classList.add("active");
     }else if(currento == "contacts.html" || currento.includes("contacts")){
         document.getElementById("contactLk").classList.add("active");
     }else{
