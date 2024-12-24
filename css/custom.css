@@ -16,3 +16,20 @@
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
 }
+.hidetestimony{
+    display: none;
+}
+.casetestimony{
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
