@@ -295,6 +295,101 @@
           </div>
         </div>
       </section>
+	   <!-- Testimonials-->
+      <section class="section section-lg bg-default">
+        <div class="container">
+		<h2>Customer <span class="text-light">Testimonials</span></h2>
+          <div class="row row-50 casetestimony" id="testimonyalt1">
+            <div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">This service simplifies investment decisions, allowing me to invest in properties I’m passionate about with just a few clicks.</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>David Soutoul</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+			<div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">The liquidity options provided by the platform make selling stakes straightforward, which is a game-changer in real estate investing..</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>Dan Pearce</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+			<div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">I've seen consistent improvements and enjoy monthly dividends. The transparency and accessibility of investments are commendable.</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>Muhammad Waqas Ahmad</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+		  
+		  <div class="row row-50 hidetestimony" id="testimonyalt2">
+            <div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">The platform is intuitive, and the support team is always ready to help with any questions I have.</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>Dakota Woods</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+			<div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">Starting my investment journey here was easy, with minimal capital required to begin investing in Dubai's real estate market.</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>Miroslav</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+			<div class="col-md-10 col-lg-4">
+              <blockquote class="quote quote-left-align">
+                <q class="big">The opportunity to invest in Dubai without large sums was a dream come true, and the customer service was outstanding.</q>
+                <div class="quote-meta unit">
+                  <div class="unit-left">
+                  </div>
+                  <div class="unit-body">
+                    <div class="author">
+                      <cite>Raoel Moeniralam</cite>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
 	  <div class="box-footer-banner">
 	  </div>
 	  
@@ -305,3 +400,27 @@
 
   </body>
 </html>
+<script>
+setInterval(function() {
+    // Get the elements by their IDs
+    var testimonyalt1 = document.getElementById("testimonyalt1");
+    var testimonyalt2 = document.getElementById("testimonyalt2");
+
+    // Check if testimonyalt1 has the class 'casetestimony'
+    if (testimonyalt1.classList.contains("casetestimony")) {
+        // Remove 'casetestimony' from testimonyalt1
+        testimonyalt1.classList.remove("casetestimony");
+        testimonyalt1.classList.add("hidetestimony");
+        // Add 'casetestimony' to testimonyalt2
+        testimonyalt2.classList.remove("hidetestimony");
+        testimonyalt2.classList.add("casetestimony");
+    } else {
+        // If testimonyalt1 doesn't have 'casetestimony', add it back to testimonyalt1
+        testimonyalt1.classList.remove("hidetestimony");
+        testimonyalt1.classList.add("casetestimony");
+        // Remove 'casetestimony' from testimonyalt2
+        testimonyalt2.classList.remove("casetestimony");
+        testimonyalt2.classList.add("hidetestimony");
+    }
+}, 10000); // 30000 milliseconds = 30 seconds
+</script>
